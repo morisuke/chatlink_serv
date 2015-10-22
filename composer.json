@@ -1,5 +1,6 @@
 {
     "require": {
-        "euskadi31/opengraph": "^1.0"
+        "euskadi31/opengraph": "^1.0",
+        "fabpot/goutte": "^3.1"
     }
 }
