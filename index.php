@@ -6,6 +6,10 @@ const URL   = 'og:url';
 const DESC  = 'og:description';
 const IMAGE = 'og:image';
 
+// レスポンスヘッダをセット
+header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json; charset=utf-8');
+
 // URLがカラの場合はカラjsonを返す
 if (empty($_GET['url']))
 {
@@ -28,6 +32,4 @@ $document->each(function($node) use (&$ogp) {
 
 });
 
-header("Access-Control-Allow-Origin: *");
-header('Content-Type: application/json; charset=utf-8');
 echo json_encode($ogp);
