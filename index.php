@@ -10,6 +10,7 @@ const IMAGE = 'og:image';
 if (empty($_GET['url']))
 {
 	echo json_encode([]);
+	exit;
 }
 
 // OGPを取得して返す処理
